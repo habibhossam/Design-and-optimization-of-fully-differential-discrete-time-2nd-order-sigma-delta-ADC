@@ -1,0 +1,1052 @@
+<?xml version="1.0"?>
+<setupdb version="5">data
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test>Sigma_Delta_ADC:second_order:1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>second_order</value>
+					</option>
+					<option>lib
+						<value>Sigma_Delta_ADC</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>Sigma_Delta_ADC:second_order:1_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>second_order</value>
+					</option>
+					<option>lib
+						<value>Sigma_Delta_ADC</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+				<outputs>
+					<output>ENOB
+						<evalType>point</evalType>
+					</output>
+					<output>spectrumMeasurement(getData("/VOUTP" ?result "tran") t VAR("TDROP") VAR("TSTOP") VAR("NFFT") VAR("FIN") (1.1 * VAR("FMAX")) 0 "Rectangular" 0 0 7 "enob")
+						<evalType>point</evalType>
+					</output>
+					<output>SNR
+						<evalType>point</evalType>
+					</output>
+				</outputs>
+			</test>
+		</tests>
+		<vars>
+			<var>Ao
+				<value>10e5</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>C11
+				<value>2p</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>C12
+				<value>2p</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>CS
+				<value>1p</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>CS1
+				<value>1p</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>FIN
+				<value>(NCYC/NFFT)/Ts</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Rsig
+				<value>1k</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Td
+				<value>0.05u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Ton
+				<value>0.4*Ts</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Trf
+				<value>0.001*Ts</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Ts
+				<value>1u</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VCM
+				<value>0.5*(VREFN+VREFP)</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VDD
+				<value>1.8</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VIN_DC
+				<value>0.125*(VREFP-VREFN)</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VIN_MAX
+				<value>VDD-0.2</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VIN_MIN
+				<value>0.2</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VOUT_MAX
+				<value>VDD-0.2</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VOUT_MIN
+				<value>0.2</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VPK
+				<value>A*(VREFP-VREFN)</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VREFN
+				<value>0.25*VDD</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>VREFP
+				<value>0.75*VDD</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>A
+				<value>0.5</value>
+			</var>
+			<var>CP
+				<value>50f</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>NFFT
+				<value>(2**5)*OSR</value>
+			</var>
+			<var>NCYC
+				<value>16</value>
+			</var>
+			<var>OSR
+				<value>500</value>
+			</var>
+			<var>FNYQ
+				<value>0.5/Ts</value>
+			</var>
+			<var>FMAX
+				<value>FNYQ/OSR</value>
+			</var>
+			<var>TDROP
+				<value>0.5/FIN</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>TSTOP
+				<value>NCYC/FIN+TDROP</value>
+				<dependentTests>
+					<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<overwritehistoryname>Interactive.0</overwritehistoryname>
+		<plottingoptions>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>waveformtemplate
+				<value></value>
+			</plottingoption>
+		</plottingoptions>
+		<specs>
+			<spec>Sigma_Delta_ADC:second_order:1.SNR
+				<testname>Sigma_Delta_ADC:second_order:1</testname>
+				<resname>SNR</resname>
+				<specType>gt</specType>
+				<min>100</min>
+				<max></max>
+				<target></target>
+				<tol></tol>
+			</spec>
+		</specs>
+	</active>
+	<history>History
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Behavioral_comp
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>Sigma_Delta_ADC:second_order:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Sigma_Delta_ADC:second_order:1_none_Behavioral_comp</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+						<outputs>
+							<output>ENOB
+								<evalType>point</evalType>
+							</output>
+							<output>spectrumMeasurement(getData("/VOUTP" ?result "tran") t VAR("TDROP") VAR("TSTOP") VAR("NFFT") VAR("FIN") (1.1 * VAR("FMAX")) 0 "Rectangular" 0 0 7 "enob")
+								<evalType>point</evalType>
+							</output>
+							<output>SNR
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+					</test>
+				</tests>
+				<vars>
+					<var>Ao
+						<value>10e5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C11
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C12
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS1
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>FIN
+						<value>(NCYC/NFFT)/Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Rsig
+						<value>1k</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Td
+						<value>0.05u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ton
+						<value>0.4*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Trf
+						<value>0.001*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ts
+						<value>1u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VCM
+						<value>0.5*(VREFN+VREFP)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VDD
+						<value>1.8</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_DC
+						<value>0.125*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VPK
+						<value>A*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFN
+						<value>0.25*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFP
+						<value>0.75*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>A
+						<value>0.5</value>
+					</var>
+					<var>CP
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>NFFT
+						<value>(2**5)*OSR</value>
+					</var>
+					<var>NCYC
+						<value>16</value>
+					</var>
+					<var>OSR
+						<value>500</value>
+					</var>
+					<var>FNYQ
+						<value>0.5/Ts</value>
+					</var>
+					<var>FMAX
+						<value>FNYQ/OSR</value>
+					</var>
+					<var>TDROP
+						<value>0.5/FIN</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>TSTOP
+						<value>NCYC/FIN+TDROP</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu May 23 09:50:47 2024</timestamp>
+			<resultsname>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Behavioral_comp.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Behavioral_comp.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/berkeley_cadence_095047499</localpsfdir>
+			<psfdir>/home/cadence/simulation/Sigma_Delta_ADC/second_order/adexl/results/data/Behavioral_comp</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Sigma_Delta_ADC/second_order/adexl/results/data/Behavioral_comp</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Behavioral_comp.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Behavioral_comp.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+			<locked>1</locked>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Actual Comparator
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>Sigma_Delta_ADC:second_order:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Sigma_Delta_ADC:second_order:1_none_Actual%20Comparator</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+						<outputs>
+							<output>ENOB
+								<evalType>point</evalType>
+							</output>
+							<output>spectrumMeasurement(getData("/VOUTP" ?result "tran") t VAR("TDROP") VAR("TSTOP") VAR("NFFT") VAR("FIN") (1.1 * VAR("FMAX")) 0 "Rectangular" 0 0 7 "enob")
+								<evalType>point</evalType>
+							</output>
+							<output>SNR
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+					</test>
+				</tests>
+				<vars>
+					<var>Ao
+						<value>10e5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C11
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C12
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS1
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>FIN
+						<value>(NCYC/NFFT)/Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Rsig
+						<value>1k</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Td
+						<value>0.05u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ton
+						<value>0.4*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Trf
+						<value>0.001*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ts
+						<value>1u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VCM
+						<value>0.5*(VREFN+VREFP)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VDD
+						<value>1.8</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_DC
+						<value>0.125*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VPK
+						<value>A*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFN
+						<value>0.25*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFP
+						<value>0.75*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>A
+						<value>0.5</value>
+					</var>
+					<var>CP
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>NFFT
+						<value>(2**5)*OSR</value>
+					</var>
+					<var>NCYC
+						<value>16</value>
+					</var>
+					<var>OSR
+						<value>500</value>
+					</var>
+					<var>FNYQ
+						<value>0.5/Ts</value>
+					</var>
+					<var>FMAX
+						<value>FNYQ/OSR</value>
+					</var>
+					<var>TDROP
+						<value>0.5/FIN</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>TSTOP
+						<value>NCYC/FIN+TDROP</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<specs>
+					<spec>Sigma_Delta_ADC:second_order:1.SNR
+						<testname>Sigma_Delta_ADC:second_order:1</testname>
+						<resname>SNR</resname>
+						<specType>gt</specType>
+						<min>100</min>
+						<max></max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+			</checkpoint>
+			<timestamp>Thu May 23 10:09:26 2024</timestamp>
+			<resultsname>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Actual%20Comparator.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Actual%20Comparator.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/berkeley_cadence_100926907</localpsfdir>
+			<psfdir>/home/cadence/simulation/Sigma_Delta_ADC/second_order/adexl/results/data/Actual%20Comparator</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Sigma_Delta_ADC/second_order/adexl/results/data/Actual%20Comparator</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Actual%20Comparator.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Actual%20Comparator.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+			<locked>1</locked>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.0
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>Sigma_Delta_ADC:second_order:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Sigma_Delta_ADC:second_order:1_none_Interactive.0</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>second_order</value>
+							</option>
+							<option>lib
+								<value>Sigma_Delta_ADC</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+						<outputs>
+							<output>ENOB
+								<evalType>point</evalType>
+							</output>
+							<output>spectrumMeasurement(getData("/VOUTP" ?result "tran") t VAR("TDROP") VAR("TSTOP") VAR("NFFT") VAR("FIN") (1.1 * VAR("FMAX")) 0 "Rectangular" 0 0 7 "enob")
+								<evalType>point</evalType>
+							</output>
+							<output>SNR
+								<evalType>point</evalType>
+							</output>
+						</outputs>
+					</test>
+				</tests>
+				<vars>
+					<var>Ao
+						<value>10e5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C11
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>C12
+						<value>2p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>CS1
+						<value>1p</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>FIN
+						<value>(NCYC/NFFT)/Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Rsig
+						<value>1k</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Td
+						<value>0.05u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ton
+						<value>0.4*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Trf
+						<value>0.001*Ts</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Ts
+						<value>1u</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VCM
+						<value>0.5*(VREFN+VREFP)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VDD
+						<value>1.8</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_DC
+						<value>0.125*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VIN_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MAX
+						<value>VDD-0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VOUT_MIN
+						<value>0.2</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VPK
+						<value>A*(VREFP-VREFN)</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFN
+						<value>0.25*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>VREFP
+						<value>0.75*VDD</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>A
+						<value>0.5</value>
+					</var>
+					<var>CP
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>NFFT
+						<value>(2**5)*OSR</value>
+					</var>
+					<var>NCYC
+						<value>16</value>
+					</var>
+					<var>OSR
+						<value>500</value>
+					</var>
+					<var>FNYQ
+						<value>0.5/Ts</value>
+					</var>
+					<var>FMAX
+						<value>FNYQ/OSR</value>
+					</var>
+					<var>TDROP
+						<value>0.5/FIN</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>TSTOP
+						<value>NCYC/FIN+TDROP</value>
+						<dependentTests>
+							<dependentTest omitted="0">Sigma_Delta_ADC:second_order:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>Sigma_Delta_ADC:second_order:1.SNR
+						<testname>Sigma_Delta_ADC:second_order:1</testname>
+						<resname>SNR</resname>
+						<specType>gt</specType>
+						<min>100</min>
+						<max></max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu May 23 15:45:10 2024
+</timestamp>
+			<resultsname>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Interactive.0.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.0.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/berkeley_cadence_154510527</localpsfdir>
+			<psfdir>/home/cadence/simulation/Sigma_Delta_ADC/second_order/adexl/results/data/Interactive.0</psfdir>
+			<simdir>$AXL_PROJECT_DIR/Sigma_Delta_ADC/second_order/adexl/results/data/Interactive.0</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/cadence/my_project/UMC/65/_G-01-LOGIC_MIXED_MODE65N-SP_LOW_K/Designkits/Cadence_IC6/Sigma_Delta_ADC/second_order/adexl/results/data/Interactive.0.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.0.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+	</history>
+</setupdb>

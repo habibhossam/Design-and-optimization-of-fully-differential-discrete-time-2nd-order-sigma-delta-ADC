@@ -1,0 +1,45 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu May 23 10:09:27 2024 
+Best design point: 1
+Design specs: 
+	Sigma_Delta_ADC:second_order:1	corner	Nominal - 
+	ENOB		17.01
+	SNR		104.1
+Design parameters: 
+	Ao		1M
+	C11		2p
+	C12		2p
+	CS		1p
+	CS1		1p
+	FIN		1k
+	Rsig		1k
+	Td		50n
+	Ton		400n
+	Trf		1n
+	Ts		1u
+	VCM		900m
+	VDD		1.8
+	VIN_DC		112.5m
+	VIN_MAX		1.6
+	VIN_MIN		200m
+	VOUT_MAX		1.6
+	VOUT_MIN		200m
+	VPK		450m
+	VREFN		450m
+	VREFP		1.35
+	A		500m
+	CP		50f
+	NFFT		16k
+	NCYC		16
+	OSR		500
+	FNYQ		500k
+	FMAX		1k
+	TDROP		500u
+	TSTOP		16.5m
+
+Interactive.0
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.0 completed. 
+Current time: Thu May 23 10:18:36 2024 

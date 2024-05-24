@@ -1,0 +1,51 @@
+// VerilogA for Analog_systems, lab_07_comp, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module Comp_v (VINP, VINN, CLK, VOP, VON, VGND, VDD) ;
+// VGND and VDD are included to be pin-accurate with the schematic view
+// PINS
+input VINP, VINN, CLK;
+output VOP, VON;
+inout VGND, VDD; 
+electrical VINP, VINN, CLK, VOP, VON, VGND, VDD;
+// INSTANCE PARAMETERS:
+// vhigh = Analog value for a Digital 1 on output [V]
+// p_off = Offset voltage added to VINP pin [V]
+// slack = The smallest time interval considered negligible
+// (abstol for clock) [S]
+// td = intrinsic delay from threshold cross to output 50%
+// change [S]. H: That's why I use td - trf/2
+// trf = Transistion time for output rise/fall [S]
+
+// vth = CLK pin's threshold voltage [V]
+// vlow = Analog value for a Digital 0 on output [V]
+ parameter real p_off = 10.0u;
+ parameter real trf = 1n from (0:inf);
+ parameter real td = 1n from (trf/2:inf);
+ parameter real vhigh = 1.8;
+ parameter real vlow = 0.0;
+ parameter real vth = 0.9;
+// LOCAL VARIABLES:
+ real vin, outstate;
+ 
+//==========================================================================
+ 
+ analog begin
+ 	@(initial_step) begin
+ 	  vin =V(VINP,VINN) + p_off;
+ 	  outstate = (vin > 0.0) ? vhigh : vlow ;
+ 	end 
+ 
+ // when re-CLKd need to determine if condition has changed
+ 
+ 	@(cross(V(CLK)-vth,+1))  // on rising edge
+ 	   vin =V(VINP,VINN) + p_off;
+ 	   outstate = (vin > 0.0) ? vhigh : vlow ;
+ 	    // normal and complement outputs 
+ 	   V(VOP) <+ transition (outstate, td-trf/2, trf, trf );
+ 	   V(VON) <+ vhigh+vlow-V(VOP);
+	 end
+
+endmodule
